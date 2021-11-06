@@ -24,7 +24,7 @@ window.addEventListener( "load", function(){
 		var url = null;
 		
 		if (GetThemAll.Prefs.get("install_time") == 0) 	{
-			url = "http://krishna2nd.github.io/";
+			url = "";
 		}
 		else {
 			
@@ -43,7 +43,7 @@ window.addEventListener( "load", function(){
 		GetThemAll.Prefs.set( "install_time", new Date().getTime() );
 	}
 		
-	chrome.runtime.setUninstallURL("http://krishna2nd.github.io");
+	chrome.runtime.setUninstallURL("");
 	
 	chrome.windows.getCurrent(function(window) 	 {
 		GetThemAll.Media.widthWin = window.width;		
@@ -197,7 +197,7 @@ function display_settings(  )  {
 // ----------------------------------------------
 navigateMessageDisabled = function(uri){
 	
-	var url = 'http://krishna2nd.github.io/';
+	var url = '';
 	
 	chrome.tabs.query( 	{  }, function( tabs ){
 		
